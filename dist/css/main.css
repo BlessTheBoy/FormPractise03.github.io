@@ -19,7 +19,6 @@ body .loginbox {
   width: 320px;
   max-width: 100%;
   margin: 10px;
-  padding: 10px;
   background: #000;
   color: #fff;
   position: relative;
@@ -49,6 +48,11 @@ body .loginbox .form input:-webkit-autofill:active {
   -webkit-text-fill-color: white !important;
 }
 
+body .loginbox .form .inputbox {
+  position: relative;
+  padding-bottom: 12px;
+}
+
 body .loginbox .form .inputbox label {
   display: block;
   font-weight: bold;
@@ -64,6 +68,23 @@ body .loginbox .form .inputbox input {
   height: 40px;
   font-size: 1rem;
   color: #fff;
+}
+
+body .loginbox .form .inputbox .error-message {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  font-size: 12px;
+  color: red;
+}
+
+body .loginbox .form .inputbox.error .error-message {
+  visibility: visible;
+}
+
+body .loginbox .form .inputbox.error input {
+  border-color: red;
 }
 
 body .loginbox .form button {
@@ -93,5 +114,40 @@ body .loginbox a {
 
 body .loginbox a:hover {
   color: #ffc107;
+}
+
+body .loginbox footer {
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  margin-left: -5px;
+  font-size: 12px;
+  color: #fb2525;
+}
+
+body .loginbox footer a {
+  color: #fb2525;
+}
+
+body .loginbox footer p {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+}
+
+body .loginbox footer p:hover {
+  color: #ffc107;
+}
+
+body .loginbox footer p:hover svg {
+  fill: #ffc107;
+}
+
+body .loginbox footer .svg {
+  width: 20%;
+  min-width: 65px;
+  margin: 0px auto;
+  margin-bottom: -6px;
+  fill: #fb2525;
 }
 /*# sourceMappingURL=main.css.map */
