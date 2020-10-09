@@ -1,0 +1,100 @@
+@import 'reset';
+
+$BrandOrange: #fb2525;
+$BrandYellow: #ffc107;
+
+body{
+    background: url("../images/background.jpg") no-repeat fixed center;
+    background-size: cover;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .loginbox{
+        width: 320px;
+        max-width: 100%;
+        margin: 10px;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        position: relative;
+        padding: 70px 3%;
+
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+
+        .heading{
+            text-align: center;
+            font-size: 24px;
+            padding-bottom: 20px;
+        }
+
+        .form{
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+                transition: background-color 5500s ease-in-out 0s;
+                -webkit-text-fill-color: white !important;
+            }
+
+            .inputbox{
+                label{
+                    display: block;
+                    font-weight: bold;
+                }
+
+                input{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    border-bottom: 1px solid #fff;
+                    height: 40px;
+                    font-size: 1rem;
+                    color: #fff;
+                }
+            }
+
+            button{
+                width: 100%;
+                margin-bottom: 20px;
+                border: none;
+                font-size: 18px;
+                outline: none;
+                height: 40px;
+                border-radius: 20px;
+                color: #fff;
+                background: $BrandOrange;
+
+                &:hover{
+                    cursor: pointer;
+                    color: #000;
+                    background: $BrandYellow;
+                }
+            }
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 20px;
+            color: darkgrey;
+
+            &:hover{
+                color: $BrandYellow;
+            }
+        }
+    }
+}
